@@ -1,0 +1,49 @@
+:root {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  text-align: center;
+  align-items: center;
+}
+.board {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . .";
+}
+.cell {
+  width: min(100px, 12vh, 12vw);
+  height: min(100px, 12vh, 12vw);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.color {
+  background-color: red;
+}

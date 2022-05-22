@@ -1,0 +1,76 @@
+:root {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  height: 100%;
+  text-align: center;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+}
+p {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+}
+.container {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.row {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.cell {
+  height: 50px;
+  width: 50px;
+  border-right: 1px solid black;
+  max-width: 100px;
+  max-height: 100px;
+  cursor: pointer;
+}
+
+.odd {
+}
+
+.shake {
+  animation: shake 0.8s infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-50.4%, -50%);
+  }
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translate(-49.6%, -50%);
+  }
+}
